@@ -1,5 +1,5 @@
 while True:
-    name = input("Informe a base de conversão B para binário, O para octal e H para hexadecimal: ")
+    name = input("Informe a base de conversão B para binário, O para octal e H para hexadecimal, ou N para Sair: ")
     exp = name.upper()
     
     if exp == 'B':
@@ -22,6 +22,15 @@ while True:
         print(f'O numéro {num} em hexadecimal é: ' + hexa[2::])
         continue
     
+    elif exp == 'N':
+        cont = input("deseja realmente sair [S]im ou [N]ão ?: ")
+        nai = cont.upper()
+        if nai == 'S':
+            break
+        elif nai != 'S' or nai != 'N':
+            print("sim ou não")
+        else:
+            continue
     else:
         print("Informe somente as opções informadas ! ")
         continue
